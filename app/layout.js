@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import "@styles/globals.css";
 
+import Watermark from "@components/Watermark.js";
+
 const helveticaBlack = localFont({
   src: "../public/assets/fonts/HelveticaNeueLTProBlk.woff2",
   variable: "--helvetica-black",
@@ -59,6 +61,13 @@ export default function RootLayout({ children }) {
           helveticaExtended?.variable || ""
         }  ${helveticaBold?.variable || ""}`}
       >
+        <Watermark
+          docX={docX}
+          docY={docY}
+          mouseX={mouseX / 3}
+          mouseY={mouseY / 3}
+          transition={transition}
+        />
         {children}
       </body>
     </html>

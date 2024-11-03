@@ -3,13 +3,11 @@ import { motion, animate, stagger } from "framer-motion";
 
 import { toKebabCase } from "@utils/Functions.js";
 
-export function StateIcon({ isOpen }) {
+export function StateIcon() {
   return (
     <div className="project__state-icon">
       <div className="state-icon__stem"></div>
-      <div
-        className={`state-icon__stem ${isOpen ? "vertical--open" : "vertical"}`}
-      ></div>
+      <div className={`state-icon__stem vertical`}></div>
     </div>
   );
 }
@@ -18,11 +16,11 @@ const formatOrder = (index) => {
   return String(index + 1).padStart(3, "0");
 };
 
-function ProjectContents({ title, index, isOpen }) {
+function ProjectContents({ title, index }) {
   return (
     <>
       <div className="project__order">
-        <StateIcon isOpen={isOpen} />
+        <StateIcon />
         {formatOrder(index)}
       </div>
       <h2
@@ -40,14 +38,6 @@ const initialValue = {
 };
 
 function Project({ title, url, index, mouseX, mouseY }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function handleClick() {
-    if (!url) {
-      setIsOpen((prevState) => !prevState);
-    }
-  }
-
   useEffect(() => {
     const staggerDelay = stagger(0.06);
     const translateAmount = "0%";
@@ -79,9 +69,8 @@ function Project({ title, url, index, mouseX, mouseY }) {
         href={url ? url : `projects/${id}`}
         className="feed__project"
         id={id}
-        onClick={handleClick}
       >
-        <ProjectContents title={title} index={index} isOpen={isOpen} />
+        <ProjectContents title={title} index={index} />
       </motion.a>
     </>
   );

@@ -18,7 +18,6 @@ import "@styles/globals.css";
 
 import Footer from "@components/Footer.js";
 import Feed from "@components/Feed.js";
-import Watermark from "@components/Watermark.js";
 
 function Home() {
   const ref = useRef(null);
@@ -59,8 +58,6 @@ function Home() {
         docY={docY}
         mouseX={mouseX / 3}
         mouseY={mouseY / 3}
-        /*         initial={{ opacity: 0, y: 0, filter: "blur(5px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} */
         transition={transition}
       />
     </div>

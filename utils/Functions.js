@@ -3,6 +3,7 @@ import projectsData from "../data/projects.json";
 export const toKebabCase = (value) => {
   return value
     .replace(/&nbsp;/g, " ")
+    .replace(/"/g, "")
     .split(" ")
     .join("-")
     .toLowerCase();

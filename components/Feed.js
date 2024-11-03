@@ -10,7 +10,7 @@ import {
   steps,
 } from "framer-motion";
 
-import ProjectButton from "./ProjectButton.js";
+import ProjectButton from "./ProjectLink.js";
 import projectsData from "../data/projects.json";
 import { toKebabCase } from "@utils/Functions.js";
 
