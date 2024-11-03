@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@components/*": ["components/*"],
+      "@data/*": ["data/*"],
+      "@utils/*": ["utils/*"],
+      "@styles/*": ["styles/*"],
+      "@images/*": ["public/assets/images/*"],
+      "@fonts/*": ["public/assets/fonts/*"],
+      "@icons/*": ["public/assets/icons/*"]
     }
   }
 }
