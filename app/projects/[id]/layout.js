@@ -1,3 +1,4 @@
+import { ReactLenis, useLenis } from "lenis/react";
 import localFont from "next/font/local";
 import "@styles/globals.css";
 

@@ -17,8 +17,15 @@ import Link from "./Link.js";
 import { mouseX, mouseY } from "@utils/values.js";
 
 function NavBar({}) {
+  const ref = useRef(null);
+  const { docX, docY } = useMouse(ref);
+
+  const ratio = 100;
+  const mouseX = 1 - (docX / window.innerWidth) * ratio;
+  const mouseY = 1 - (docY / window.innerHeight) * ratio - 50;
   return (
     <motion.nav
+      ref={ref}
       drag
       dragConstraints={{
         top: 0,

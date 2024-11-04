@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "@styles/globals.css";
+import "@styles/_reset.css";
 
 import Watermark from "@components/Watermark.js";
 import Footer from "@components/Footer.js";
@@ -63,8 +64,8 @@ export default function RootLayout({ children }) {
         }  ${helveticaBold?.variable || ""}`}
       >
         {children}
-        <Watermark />
         <Footer />
+        <Watermark />
       </body>
     </html>
   );

@@ -18,6 +18,7 @@ nextjs-portal {
 
 body {
   background-color: white;
+  margin: 0;
 }
 
 ::selection {
@@ -284,6 +285,29 @@ a {
 
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   transition: color var(--transition-250);
+}
+
+.project-feed {
+  position: relative;
+
+  width: 100%;
+  padding: 2rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.project-feed__img {
+  position: relative;
+  height: 90% !important;
+  width: 50% !important;
+  object-fit: contain;
 }
 
 @media (hover: hover) {

@@ -18,7 +18,14 @@
 
     "desc": "Scarf Designs",
     "year": "2023",
-    "images": ["/assets/images/projects/"]
+    "images": [
+      "/assets/images/projects/chants-for-recognition/chants-for-recognition-1.webp",
+      "/assets/images/projects/chants-for-recognition/chants-for-recognition-2.webp",
+      "/assets/images/projects/chants-for-recognition/chants-for-recognition-3.webp",
+      "/assets/images/projects/chants-for-recognition/chants-for-recognition-4.webp",
+      "/assets/images/projects/chants-for-recognition/chants-for-recognition-5.webp",
+      "/assets/images/projects/chants-for-recognition/chants-for-recognition-6.webp"
+    ]
   },
   {
     "title": "Erik Merisalu",
@@ -73,6 +80,10 @@
 
     "desc": "Photobook Design and Print Proofing",
     "year": "2024",
-    "images": ["/assets/images/projects/"]
+    "images": [
+      "/assets/images/projects/float/float-1.webp",
+      "/assets/images/projects/float/float-2.webp",
+      "/assets/images/projects/float/float-3.webp"
+    ]
   }
 ]

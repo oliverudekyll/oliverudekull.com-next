@@ -86,7 +86,7 @@ function Watermark({}) {
       <span
         className="watermark"
         style={{
-          backgroundPosition: `${mouseX}px ${mouseY}px`,
+          backgroundPosition: `${mouseX / 3}px ${mouseY / 3}px`,
         }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
