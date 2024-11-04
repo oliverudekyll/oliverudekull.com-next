@@ -1,3 +1,7 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import { useMouse } from "react-use";
 import {
   motion,
   cubicBezier,
@@ -10,15 +14,9 @@ import {
 } from "framer-motion";
 import { interpolate } from "flubber";
 
-function Watermark({
-  mouseX,
-  mouseY,
-  animate,
-  initial,
-  transition,
-  docX,
-  docY,
-}) {
+import { transition } from "@utils/values.js";
+
+function Watermark({}) {
   const svgInitial = [
     [541.403, 2.29428],
     [540.705, 1.5959],
@@ -55,8 +53,26 @@ function Watermark({
     [541.403, 2.29428],
   ];
 
+  const ref = useRef(null);
+  const { docX, docY } = useMouse(ref);
+
+  const ratio = 100;
+  const mouseX = 1 - (docX / window.innerWidth) * ratio;
+  const mouseY = 1 - (docY / window.innerHeight) * ratio - 50;
+
+  const initial = {
+    opacity: 0,
+    filter: "blur(2px)",
+  };
+
+  const animate = {
+    opacity: 1,
+    filter: "blur(0px)",
+  };
+
   return (
     <motion.div
+      ref={ref}
       initial={initial}
       animate={animate}
       transition={transition}

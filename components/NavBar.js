@@ -1,3 +1,7 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import { useMouse } from "react-use";
 import {
   motion,
   cubicBezier,
@@ -10,8 +14,9 @@ import {
 } from "framer-motion";
 
 import Link from "./Link.js";
+import { mouseX, mouseY } from "@utils/values.js";
 
-function NavBar({ mouseX, mouseY }) {
+function NavBar({}) {
   return (
     <motion.nav
       drag

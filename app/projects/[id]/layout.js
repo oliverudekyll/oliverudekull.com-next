@@ -5,25 +5,19 @@ import Watermark from "@components/Watermark.js";
 import Footer from "@components/Footer.js";
 
 const helveticaBlack = localFont({
-  src: "../public/assets/fonts/HelveticaNeueLTProBlk.woff2",
+  src: "../../../public/assets/fonts/HelveticaNeueLTProBlk.woff2",
   variable: "--helvetica-black",
 });
 
 const helveticaExtended = localFont({
-  src: "../public/assets/fonts/HelveticaNeueLTProLtEx.woff2",
+  src: "../../../public/assets/fonts/HelveticaNeueLTProLtEx.woff2",
   variable: "--helvetica-ext",
 });
 
 const helveticaBold = localFont({
-  src: "../public/assets/fonts/HelveticaNeueLTProBd.woff2",
+  src: "../../../public/assets/fonts/HelveticaNeueLTProBd.woff2",
   variable: "--helvetica-bold",
 });
-
-export const metadata = {
-  title: "Oliver Udeküll",
-  description:
-    "Oliver Udeküll is a graphic designer and web developer based in Tallinn, Estonia.",
-};
 
 export default function RootLayout({ children }) {
   return (
@@ -31,21 +25,21 @@ export default function RootLayout({ children }) {
       <head>
         <link
           rel="preload"
-          href="../public/assets/fonts/HelveticaNeueLTProBlk.woff2"
+          href="assets/fonts/HelveticaNeueLTProBlk.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="../public/assets/fonts/HelveticaNeueLTProLtEx.woff2"
+          href="assets/fonts/HelveticaNeueLTProLtEx.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="../public/assets/fonts/HelveticaNeueLTProBd.woff2"
+          href="assets/fonts/HelveticaNeueLTProBd.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
@@ -63,8 +57,6 @@ export default function RootLayout({ children }) {
         }  ${helveticaBold?.variable || ""}`}
       >
         {children}
-        <Watermark />
-        <Footer />
       </body>
     </html>
   );

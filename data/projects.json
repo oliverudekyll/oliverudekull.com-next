@@ -4,21 +4,21 @@
 
     "desc": "",
     "year": "2021",
-    "images": ["../images/projects/elementary/elementary-1.webp"]
+    "images": ["/assets/images/projects/elementary/elementary-1.webp"]
   },
   {
     "title": "Thru the&nbsp;Motions",
 
     "desc": "Single Artwork",
     "year": "2023",
-    "images": ["../images/projects/"]
+    "images": ["/assets/images/projects/"]
   },
   {
     "title": "Chants for&nbsp;Recognition",
 
     "desc": "Scarf Designs",
     "year": "2023",
-    "images": ["../images/projects/"]
+    "images": ["/assets/images/projects/"]
   },
   {
     "title": "Erik Merisalu",
@@ -32,14 +32,14 @@
 
     "desc": "Poster Design",
     "year": "2023",
-    "images": ["../images/projects/"]
+    "images": ["/assets/images/projects/"]
   },
   {
     "title": "Woman Sitting at the&nbsp;Machine (Thinking)",
 
     "desc": "Book Design",
     "year": "2023",
-    "images": ["../images/projects/"]
+    "images": ["/assets/images/projects/"]
   },
   {
     "title": "If This Be&nbsp;Not&nbsp;I",
@@ -47,9 +47,9 @@
     "desc": "EP Artwork",
     "year": "2024",
     "images": [
-      "../images/projects/if-this-be-not-i/if-this-be-not-i-1.webp",
-      "../images/projects/if-this-be-not-i/if-this-be-not-i-2.webp",
-      "../images/projects/if-this-be-not-i/if-this-be-not-i-3.webp"
+      "/assets/images/projects/if-this-be-not-i/if-this-be-not-i-1.webp",
+      "/assets/images/projects/if-this-be-not-i/if-this-be-not-i-2.webp",
+      "/assets/images/projects/if-this-be-not-i/if-this-be-not-i-3.webp"
     ]
   },
   {
@@ -65,7 +65,7 @@
     "desc": "Poster Design and Animation",
     "year": "2024",
     "images": [
-      "../images/projects/\"if-this-be-not-i\"-release-party/\"if-this-be-not-i\"-release-party-1.jpg"
+      "/assets/images/projects/\"if-this-be-not-i\"-release-party/\"if-this-be-not-i\"-release-party-1.jpg"
     ]
   },
   {
@@ -73,6 +73,6 @@
 
     "desc": "Photobook Design and Print Proofing",
     "year": "2024",
-    "images": ["../images/projects/"]
+    "images": ["/assets/images/projects/"]
   }
 ]

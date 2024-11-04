@@ -1,7 +1,9 @@
-import { useState, useRef, useEffect } from "react";
-import { motion, animate, stagger } from "framer-motion";
+"use client";
 
-import { toKebabCase } from "@utils/Functions.js";
+import { useState, useEffect, useRef } from "react";
+import { useMouse } from "react-use";
+import { motion, animate, stagger } from "framer-motion";
+import { toKebabCase } from "@utils/functions.js";
 
 export function StateIcon() {
   return (
@@ -37,7 +39,14 @@ const initialValue = {
   filter: "blur(0px)",
 };
 
-function Project({ title, url, index, mouseX, mouseY }) {
+const ProjectLink = ({ title, url, index }) => {
+  const ref = useRef(null);
+  const { docX, docY } = useMouse(ref);
+
+  const ratio = 100;
+  const mouseX = 1 - (docX / window.innerWidth) * ratio;
+  const mouseY = 1 - (docY / window.innerHeight) * ratio - 50;
+
   useEffect(() => {
     const staggerDelay = stagger(0.06);
     const translateAmount = "0%";
@@ -53,26 +62,26 @@ function Project({ title, url, index, mouseX, mouseY }) {
   const id = toKebabCase(title);
 
   return (
-    <>
-      <motion.a
-        drag
-        dragConstraints={{
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-        }}
-        initial={initialValue}
-        style={{
-          backgroundPosition: `${mouseX}px ${mouseY}px`,
-        }}
-        href={url ? url : `projects/${id}`}
-        className="feed__project"
-        id={id}
-      >
-        <ProjectContents title={title} index={index} />
-      </motion.a>
-    </>
+    <motion.a
+      ref={ref}
+      drag
+      dragConstraints={{
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+      }}
+      initial={initialValue}
+      style={{
+        backgroundPosition: `${mouseX}px ${mouseY}px`,
+      }}
+      href={url ? url : `projects/${id}`}
+      className="feed__project"
+      id={id}
+    >
+      <ProjectContents title={title} index={index} />
+    </motion.a>
   );
-}
-export default Project;
+};
+
+export default ProjectLink;
